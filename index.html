@@ -3,71 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>عروض الفايبر أورنج | الصفحة الرئيسية</title>
-
+    <title>Fibre Orange — اختيار نوع التخفيض</title>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <style>
-        body { font-family: 'Tajawal', sans-serif; margin: 0; padding: 0; background: #f6f6f6; }
-        header { background: #fff; padding: 12px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
-        .logo { font-size: 1.6rem; font-weight: 900; color: #ff7900; }
-        .logo span { color: #000; }
+        body {
+            margin: 0;
+            font-family: 'Tajawal', sans-serif;
+            background: #f2f2f2;
+        }
 
-        .contact-header span { font-size: 0.9rem; color: #666; }
-        .contact-header a { font-size: 1.1rem; color: #000; text-decoration: none; font-weight: 900; }
+        /* شريط أعلى الصفحة */
+        header {
+            background: #fff;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 16px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
 
-        .hero { text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #111, #333); color: #fff; }
-        .hero h1 { font-size: 2.4rem; margin-bottom: 10px; }
+        header .left {
+            text-align: right;
+            line-height: 1.4;
+        }
 
-        .box-container { max-width: 900px; margin: 40px auto; padding: 20px; }
-        .plan-box { background: #fff; padding: 25px; border-radius: 18px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); margin-bottom: 20px; text-align: center; }
-        .plan-box a { text-decoration: none; background: #ff7900; color: #fff; padding: 12px 25px; border-radius: 30px; font-size: 1.1rem; font-weight: bold; display: inline-block; }
+        header .orange-logo {
+            font-size: 26px;
+            font-weight: 900;
+            color: #ff7900;
+        }
 
-        footer { background: #222; color: #fff; padding: 20px; text-align: center; margin-top: 40px; }
+        /* القسم الأسود */
+        .hero {
+            background: linear-gradient(#000000, #222);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 34px;
+            margin: 0 0 10px 0;
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            opacity: 0.85;
+        }
+
+        /* صورة داخل الإطار الأسود */
+        .hero-image {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero-image img {
+            width: 85%;
+            max-width: 450px;
+            border-radius: 20px;
+            box-shadow: 0px 4px 20px rgba(0,0,0,0.35);
+        }
+
+        /* البوكسات */
+        .box {
+            background: #fff;
+            margin: 25px 15px;
+            padding: 25px;
+            border-radius: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .box h2 {
+            margin-bottom: 10px;
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        .box p {
+            margin-bottom: 20px;
+            font-size: 17px;
+            color: #333;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #ff7900;
+            color: white;
+            padding: 12px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 17px;
+            font-weight: 700;
+        }
     </style>
 </head>
 
 <body>
 
-<header>
-    <div class="logo"><i class="fas fa-wifi"></i> Fibre<span>Orange</span></div>
-    <div class="contact-header">
-        <span>المستشار: كريم</span><br>
-        <a href="tel:0660201206">0660.201.206</a>
-    </div>
-</header>
+    <!-- الشريط العلوي -->
+    <header>
+        <div class="left">
+            المستشار كريم<br>
+            <strong>0660.201.206</strong>
+        </div>
+        <div class="orange-logo">FibreOrange</div>
+    </header>
 
-<section class="hero">
-    <h1>اختر نوع التخفيض</h1>
-    <p>مرحباً بك، اختر الفئة المناسبة لك للوصول إلى الأسعار الصحيحة</p>
-</section>
+    <!-- القسم الأسود -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>اختر نوع التخفيض</h1>
+            <p>مرحباً بك، اختر الفئة المناسبة للوصول إلى الأسعار الصحيحة</p>
 
-<div class="box-container">
+            <!-- الصورة بداخل الإطار الأسود -->
+            <div class="hero-image">
+                <img src="images/header.jpg" alt="Fibre Orange">
+            </div>
+        </div>
+    </section>
 
-    <div class="plan-box">
+    <!-- الأسعار العامة -->
+    <div class="box">
         <h2>الأسعار العامة</h2>
         <p>عروض بدون تخفيضات لجميع الزبائن</p>
-        <a href="standard.html">الدخول إلى الصفحة</a>
+        <a class="btn" href="general.html">الدخول إلى الصفحة</a>
     </div>
 
-    <div class="plan-box">
+    <!-- تخفيض الموظفين -->
+    <div class="box">
         <h2>تخفيض 25% للموظفين</h2>
-        <p>خاص بأسرة التعليم – الأمن – الوقاية المدنية – القوات المساعدة</p>
-        <a href="25.html">الدخول إلى صفحة الموظفين (-25%)</a>
+        <p>عروض خاصة بموظفي الدولة</p>
+        <a class="btn" href="25.html">الدخول إلى الصفحة</a>
     </div>
 
-    <div class="plan-box">
-        <h2>تخفيض 50% قدماء المحاربين</h2>
-        <p>خاص بقدماء المحاربين وأبناء الشهداء</p>
-        <a href="50.html">الدخول إلى صفحة قدماء المحاربين (-50%)</a>
+    <!-- تخفيض قدماء المحاربين -->
+    <div class="box">
+        <h2>تخفيض 50% لقدامى المحاربين</h2>
+        <p>عروض خاصة بالمتقاعدين وحاملي بطاقة المحارب</p>
+        <a class="btn" href="50.html">الدخول إلى الصفحة</a>
     </div>
-
-</div>
-
-<footer>
-    للاستفسار: <strong style="color:#ff7900;">0660201206</strong>
-</footer>
 
 </body>
 </html>
