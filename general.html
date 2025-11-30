@@ -1,1 +1,340 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عروض الألياف البصرية | إنترنت فائق السرعة</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #ff7900; /* اللون البرتقالي المميز */
+            --secondary-color: #333;
+            --bg-color: #f4f7f6;
+            --white: #ffffff;
+        }
 
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Tajawal', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--secondary-color);
+            overflow-x: hidden;
+        }
+
+        /* تنسيق الهيدر */
+        header {
+            background: var(--white);
+            padding: 1rem 5%;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: var(--primary-color);
+        }
+
+        .contact-header a {
+            text-decoration: none;
+            color: var(--secondary-color);
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* قسم البانر الرئيسي */
+        .hero {
+            height: 60vh;
+            background: linear-gradient(135deg, #ff9933 0%, #ff7900 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+            margin-top: 60px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        /* شبكة العروض */
+        .pricing-section {
+            padding: 50px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2rem;
+            color: var(--primary-color);
+            position: relative;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        /* تصميم البطاقة */
+        .card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid transparent;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(255, 121, 0, 0.2);
+            border-color: var(--primary-color);
+        }
+
+        .speed-badge {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: var(--primary-color);
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+
+        .speed-unit {
+            font-size: 1rem;
+            color: #666;
+            font-weight: normal;
+        }
+
+        .price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 20px 0;
+            color: #333;
+        }
+
+        .price span {
+            font-size: 1rem;
+            color: #777;
+        }
+
+        .features {
+            list-style: none;
+            margin-bottom: 30px;
+            text-align: right;
+            padding-right: 10px;
+        }
+
+        .features li {
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .features i {
+            color: var(--primary-color);
+            width: 20px;
+        }
+
+        .btn-order {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            transition: background 0.3s;
+        }
+
+        .btn-order:hover {
+            background: #e66a00;
+        }
+
+        /* زر الواتساب العائم */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            left: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            background-color: #20ba5a;
+        }
+
+        /* التجاوب مع الهاتف */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .whatsapp-float { left: 20px; bottom: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Fiber<span style="color:#333">Connect</span></div>
+        <div class="contact-header">
+            <a href="tel:0660201206">
+                <span>06 60 20 12 06</span>
+                <i class="fas fa-phone-alt"></i>
+            </a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div data-aos="fade-up">
+            <h1>استمتع بأقوى عروض الإنترنت</h1>
+            <p>سرعة خيالية، تركيب مجاني، واستقرار تام</p>
+        </div>
+    </section>
+
+    <section class="pricing-section">
+        <h2 class="section-title" data-aos="fade-up">اختر السرعة التي تناسبك</h2>
+        
+        <div class="pricing-grid">
+            
+            <div class="card" data-aos="fade-up" data-aos-delay="100">
+                <div class="speed-badge">20<span class="speed-unit">Mbps</span></div>
+                <div class="price">249 <span>درهم/شهر</span></div>
+                <ul class="features">
+                    <li><i class="fas fa-tachometer-alt"></i> سرعة تحميل وتنزيل 20 ميجا</li>
+                    <li><i class="fas fa-mobile-alt"></i> 2 ساعات مكالمات وطنية/دولية (زون 1)</li>
+                    <li><i class="fas fa-phone"></i> لا محدود نحو الثابت الوطني</li>
+                    <li><i class="fas fa-wifi"></i> جهاز توجيه (Router) مجاني</li>
+                    <li><i class="fas fa-tools"></i> مصاريف التركيب 99 درهم</li>
+                </ul>
+                <a href="https://wa.me/212660201206?text=أنا مهتم بعرض 20 ميجا" class="btn-order">اطلب الآن</a>
+            </div>
+
+            <div class="card" data-aos="fade-up" data-aos-delay="200">
+                <div class="speed-badge">50<span class="speed-unit">Mbps</span></div>
+                <div class="price">299 <span>درهم/شهر</span></div>
+                <ul class="features">
+                    <li><i class="fas fa-tachometer-alt"></i> سرعة تحميل وتنزيل 50 ميجا</li>
+                    <li><i class="fas fa-mobile-alt"></i> 3 ساعات مكالمات وطنية/دولية (زون 1)</li>
+                    <li><i class="fas fa-phone"></i> لا محدود نحو الثابت الوطني</li>
+                    <li><i class="fas fa-wifi"></i> جهاز توجيه (Router) مجاني</li>
+                    <li><i class="fas fa-check-circle"></i> <b>التركيب مجاني (0 درهم)</b></li>
+                </ul>
+                <a href="https://wa.me/212660201206?text=أنا مهتم بعرض 50 ميجا" class="btn-order">اطلب الآن</a>
+            </div>
+
+            <div class="card" data-aos="fade-up" data-aos-delay="300" style="border: 2px solid var(--primary-color);">
+                <div style="position: absolute; top:0; right:0; background:var(--primary-color); color:white; padding: 5px 15px; font-size: 0.8rem; border-bottom-left-radius: 10px;">الأكثر طلباً</div>
+                <div class="speed-badge">100<span class="speed-unit">Mbps</span></div>
+                <div class="price">349 <span>درهم/شهر</span></div>
+                <ul class="features">
+                    <li><i class="fas fa-tachometer-alt"></i> سرعة تحميل وتنزيل 100 ميجا</li>
+                    <li><i class="fas fa-mobile-alt"></i> 4 ساعات مكالمات وطنية/دولية (زون 1)</li>
+                    <li><i class="fas fa-phone"></i> لا محدود نحو الثابت الوطني</li>
+                    <li><i class="fas fa-wifi"></i> جهاز توجيه (Router) مجاني</li>
+                    <li><i class="fas fa-check-circle"></i> التركيب مجاني (0 درهم)</li>
+                </ul>
+                <a href="https://wa.me/212660201206?text=أنا مهتم بعرض 100 ميجا" class="btn-order">اطلب الآن</a>
+            </div>
+
+            <div class="card" data-aos="fade-up" data-aos-delay="400">
+                <div class="speed-badge">200<span class="speed-unit">Mbps</span></div>
+                <div class="price">449 <span>درهم/شهر</span></div>
+                <ul class="features">
+                    <li><i class="fas fa-tachometer-alt"></i> سرعة تحميل وتنزيل 200 ميجا</li>
+                    <li><i class="fas fa-mobile-alt"></i> 6 ساعات مكالمات وطنية/دولية (زون 1)</li>
+                    <li><i class="fas fa-phone"></i> لا محدود نحو الثابت الوطني</li>
+                    <li><i class="fas fa-wifi"></i> جهاز توجيه (Router) مجاني</li>
+                    <li><i class="fas fa-check-circle"></i> التركيب مجاني (0 درهم)</li>
+                </ul>
+                <a href="https://wa.me/212660201206?text=أنا مهتم بعرض 200 ميجا" class="btn-order">اطلب الآن</a>
+            </div>
+
+            <div class="card" data-aos="fade-up" data-aos-delay="500">
+                <div class="speed-badge">500<span class="speed-unit">Mbps</span></div>
+                <div class="price">749 <span>درهم/شهر</span></div>
+                <ul class="features">
+                    <li><i class="fas fa-tachometer-alt"></i> سرعة تحميل وتنزيل 500 ميجا</li>
+                    <li><i class="fas fa-mobile-alt"></i> 10 ساعات مكالمات وطنية/دولية (زون 1)</li>
+                    <li><i class="fas fa-phone"></i> لا محدود نحو الثابت الوطني</li>
+                    <li><i class="fas fa-wifi"></i> جهاز توجيه (Router) مجاني</li>
+                    <li><i class="fas fa-check-circle"></i> التركيب مجاني (0 درهم)</li>
+                </ul>
+                <a href="https://wa.me/212660201206?text=أنا مهتم بعرض 500 ميجا" class="btn-order">اطلب الآن</a>
+            </div>
+
+             <div class="card" data-aos="fade-up" data-aos-delay="600">
+                <div class="speed-badge">1000<span class="speed-unit">Mbps</span></div>
+                <div class="price">949 <span>درهم/شهر</span></div>
+                <ul class="features">
+                    <li><i class="fas fa-tachometer-alt"></i> تنزيل 1000 ميجا / رفع 500 ميجا</li>
+                    <li><i class="fas fa-mobile-alt"></i> 20 ساعة مكالمات وطنية/دولية (زون 1)</li>
+                    <li><i class="fas fa-phone"></i> لا محدود نحو الثابت الوطني</li>
+                    <li><i class="fas fa-wifi"></i> جهاز توجيه (Router) مجاني</li>
+                    <li><i class="fas fa-check-circle"></i> التركيب مجاني (0 درهم)</li>
+                </ul>
+                <a href="https://wa.me/212660201206?text=أنا مهتم بعرض 1000 ميجا" class="btn-order">اطلب الآن</a>
+            </div>
+
+        </div>
+    </section>
+
+    <a href="https://wa.me/212660201206" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <footer style="text-align: center; padding: 20px; background: #333; color: white; margin-top: 50px;">
+        <p>للطلب والاستفسار: 0660201206</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+</body>
+</html>
