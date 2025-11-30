@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fibre Orange — اختيار نوع التخفيض</title>
+    <title>Fibre Orange</title>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
 
     <style>
@@ -13,7 +13,6 @@
             background: #f2f2f2;
         }
 
-        /* شريط أعلى الصفحة */
         header {
             background: #fff;
             padding: 15px 20px;
@@ -35,39 +34,36 @@
             color: #ff7900;
         }
 
-        /* القسم الأسود */
+        /* الخلفية السوداء بصورة مغطية بالكامل */
         .hero {
-            background: linear-gradient(#000000, #222);
+            position: relative;
+            height: 360px;
             color: white;
             text-align: center;
-            padding: 60px 20px;
-        }
+            padding-top: 80px;
 
-        .hero-content h1 {
-            font-size: 34px;
-            margin: 0 0 10px 0;
-        }
+            background-image: url('images/header.jpg'); /* ضع صورتك هنا */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
 
-        .hero-content p {
-            font-size: 18px;
-            opacity: 0.85;
-        }
-
-        /* صورة داخل الإطار الأسود */
-        .hero-image {
-            margin-top: 30px;
             display: flex;
+            flex-direction: column;
             justify-content: center;
         }
 
-        .hero-image img {
-            width: 85%;
-            max-width: 450px;
-            border-radius: 20px;
-            box-shadow: 0px 4px 20px rgba(0,0,0,0.35);
+        .hero h1 {
+            font-size: 34px;
+            margin-bottom: 10px;
+            text-shadow: 0 3px 8px rgba(0,0,0,0.7);
         }
 
-        /* البوكسات */
+        .hero p {
+            font-size: 18px;
+            opacity: 0.9;
+            text-shadow: 0 3px 6px rgba(0,0,0,0.7);
+        }
+
         .box {
             background: #fff;
             margin: 25px 15px;
@@ -104,48 +100,37 @@
 
 <body>
 
-    <!-- الشريط العلوي -->
-    <header>
-        <div class="left">
-            المستشار كريم<br>
-            <strong>0660.201.206</strong>
-        </div>
-        <div class="orange-logo">FibreOrange</div>
-    </header>
-
-    <!-- القسم الأسود -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>اختر نوع التخفيض</h1>
-            <p>مرحباً بك، اختر الفئة المناسبة للوصول إلى الأسعار الصحيحة</p>
-
-            <!-- الصورة بداخل الإطار الأسود -->
-            <div class="hero-image">
-                <img src="https://e.top4top.io/p_36213d3gu1.png" alt="Fibre Orange">
-            </div>
-        </div>
-    </section>
-
-    <!-- الأسعار العامة -->
-    <div class="box">
-        <h2>الأسعار العامة</h2>
-        <p>عروض بدون تخفيضات لجميع الزبائن</p>
-        <a class="btn" href="general.html">الدخول إلى الصفحة</a>
+<header>
+    <div class="left">
+        المستشار كريم<br>
+        <strong>0660.201.206</strong>
     </div>
+    <div class="orange-logo">FibreOrange</div>
+</header>
 
-    <!-- تخفيض الموظفين -->
-    <div class="box">
-        <h2>تخفيض 25% للموظفين</h2>
-        <p>عروض خاصة بموظفي الدولة</p>
-        <a class="btn" href="25.html">الدخول إلى الصفحة</a>
-    </div>
+<!-- الإطار الأسود بخلفية تغطي بالكامل -->
+<section class="hero">
+    <h1>اختر نوع التخفيض</h1>
+    <p>مرحباً بك، اختر الفئة المناسبة للوصول إلى الأسعار الصحيحة</p>
+</section>
 
-    <!-- تخفيض قدماء المحاربين -->
-    <div class="box">
-        <h2>تخفيض 50% لقدامى المحاربين</h2>
-        <p>عروض خاصة بالمتقاعدين وحاملي بطاقة المحارب</p>
-        <a class="btn" href="50.html">الدخول إلى الصفحة</a>
-    </div>
+<div class="box">
+    <h2>الأسعار العامة</h2>
+    <p>عروض بدون تخفيضات لجميع الزبائن</p>
+    <a class="btn" href="general.html">الدخول إلى الصفحة</a>
+</div>
+
+<div class="box">
+    <h2>تخفيض 25% للموظفين</h2>
+    <p>عروض خاصة بموظفي الدولة</p>
+    <a class="btn" href="25.html">الدخول إلى الصفحة</a>
+</div>
+
+<div class="box">
+    <h2>تخفيض 50% لقدامى المحاربين</h2>
+    <p>عروض خاصة بحاملي بطاقة المحارب</p>
+    <a class="btn" href="50.html">الدخول إلى الصفحة</a>
+</div>
 
 </body>
 </html>
