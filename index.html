@@ -37,37 +37,44 @@
             color: #ff7900;
         }
 
-        /* الخلفية بصور تغطي المساحة بالكامل */
+        /* خلفية كاملة */
         .hero {
-            height: 380px;
-            background-image: url('images/back.png'); /* ضع الصورة داخل مجلد images */
+            height: 360px;
+            background-image: url('images/back.jpg');
             background-size: cover;
             background-position: center;
-            background-repeat: no-repeat;
+        }
 
+        /* المربعات الملونة أسفل الخلفية */
+        .color-buttons {
             display: flex;
-            flex-direction: column;
+            justify-content: space-between;
+            padding: 10px 15px;
+            background: black;
+        }
+
+        .green-box, .blue-box {
+            width: 48%;
+            height: 60px;
+            border-radius: 8px;
+            display: flex;
             justify-content: center;
             align-items: center;
-
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-
-        .hero h1 {
-            font-size: 38px;
-            margin: 0 0 10px 0;
-            text-shadow: 0 3px 8px rgba(0,0,0,0.7);
-        }
-
-        .hero p {
             font-size: 18px;
-            text-shadow: 0 3px 6px rgba(0,0,0,0.7);
-            margin: 0;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
         }
 
-        /* البوكسات */
+        .green-box {
+            background: #00c853; /* أخضر */
+        }
+
+        .blue-box {
+            background: #2962ff; /* أزرق */
+        }
+
+        /* صندوق العروض */
         .box {
             background: #ffffff;
             margin: 25px 15px;
@@ -113,27 +120,20 @@
     <div class="orange-logo">FibreOrange</div>
 </header>
 
-<!-- صورة تغطي الخلفية بالكامل -->
-<section class="hero">
-    
-</section>
+<!-- صورة كاملة -->
+<section class="hero"></section>
 
+<!-- المربعات الملونة -->
+<div class="color-buttons">
+    <a href="25.html" class="green-box">تخفيض 25%</a>
+    <a href="50.html" class="blue-box">تخفيض 50%</a>
+</div>
+
+<!-- أول بوكس -->
 <div class="box">
     <h2>الأسعار العامة</h2>
     <p>عروض موجهة لجميع الزبائن بدون تخفيضات</p>
     <a class="btn" href="general.html">الدخول</a>
-</div>
-
-<div class="box">
-    <h2>تخفيض 25% للموظفين</h2>
-    <p>عروض خاصة بموظفي الدولة</p>
-    <a class="btn" href="25.html">الدخول</a>
-</div>
-
-<div class="box">
-    <h2>تخفيض 50% لقدامى المحاربين</h2>
-    <p>عروض مخصصة لحاملي بطاقة المحارب</p>
-    <a class="btn" href="50.html">الدخول</a>
 </div>
 
 </body>
