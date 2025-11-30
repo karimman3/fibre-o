@@ -266,8 +266,7 @@
     </style>
     <script type='text/javascript' src='//pl28120926.effectivegatecpm.com/91/f2/c5/91f2c593df8c17c804c277b1ee125f44.js'></script>
 </head>
-<body>
-     <script type='text/javascript' src='//pl28120896.effectivegatecpm.com/f4/26/4e/f4264e81c642faec9aa7e6ff38c3d50e.js'></script>
+<body onload="setCategory('standard', true)"> <script type='text/javascript' src='//pl28120896.effectivegatecpm.com/f4/26/4e/f4264e81c642faec9aa7e6ff38c3d50e.js'></script>
     <header>
         <div class="logo"><i class="fas fa-wifi"></i> Fibre<span>Orange</span></div>
         <div class="contact-header">
@@ -295,24 +294,24 @@
         </div>
     </section>
     <div class="pricing-controls" data-aos="fade-up">
-        <button class="filter-btn active" onclick="setCategory('standard')">
+        <button class="filter-btn active" id="btn-standard" onclick="setCategory('standard')">
             <i class="fas fa-users"></i> العموم
         </button>
         
-        <button class="filter-btn" onclick="setCategory('employees')">
+        <button class="filter-btn" id="btn-employees" onclick="setCategory('employees')">
             <span class="discount-badge">-25%</span>
             <i class="fas fa-briefcase"></i>
             موظفي الدولة
         </button>
         
-        <button class="filter-btn" onclick="setCategory('veterans')">
+        <button class="filter-btn" id="btn-veterans" onclick="setCategory('veterans')">
             <span class="discount-badge">-50%</span>
             <i class="fas fa-medal"></i>
             قدماء المحاربين
         </button>
     </div>
 
-    <div class="category-info" id="catInfo">الأسعار العامة لجميع الزبائن</div>
+    <div class="category-info" id="catInfo"></div>
 
     <div class="pricing-grid">
         
@@ -321,7 +320,7 @@
             <div class="speed-badge">20<span class="speed-unit">Mbps</span></div>
             <div class="price-container">
                 <div class="old-price" id="old-20">249</div>
-                <div class="current-price"><span id="price-20">249</span> <span class="currency">درهم</span></div>
+                <div class="current-price"><span id="price-20"></span> <span class="currency">درهم</span></div>
             </div>
             <ul class="features">
                 <li><i class="fas fa-wifi"></i> <b>جهاز راوتر مجاني</b></li>
@@ -337,7 +336,7 @@
             <div class="speed-badge">50<span class="speed-unit">Mbps</span></div>
             <div class="price-container">
                 <div class="old-price" id="old-50">299</div>
-                <div class="current-price"><span id="price-50">299</span> <span class="currency">درهم</span></div>
+                <div class="current-price"><span id="price-50"></span> <span class="currency">درهم</span></div>
             </div>
             <ul class="features">
                 <li><i class="fas fa-wifi"></i> <b>جهاز راوتر مجاني</b></li>
@@ -353,7 +352,7 @@
             <div class="speed-badge">100<span class="speed-unit">Mbps</span></div>
             <div class="price-container">
                 <div class="old-price" id="old-100">349</div>
-                <div class="current-price"><span id="price-100">349</span> <span class="currency">درهم</span></div>
+                <div class="current-price"><span id="price-100"></span> <span class="currency">درهم</span></div>
             </div>
             <ul class="features">
                 <li><i class="fas fa-wifi"></i> <b>جهاز راوتر مجاني</b></li>
@@ -369,7 +368,7 @@
             <div class="speed-badge">200<span class="speed-unit">Mbps</span></div>
             <div class="price-container">
                 <div class="old-price" id="old-200">449</div>
-                <div class="current-price"><span id="price-200">449</span> <span class="currency">درهم</span></div>
+                <div class="current-price"><span id="price-200"></span> <span class="currency">درهم</span></div>
             </div>
             <ul class="features">
                 <li><i class="fas fa-wifi"></i> <b>جهاز راوتر مجاني</b></li>
@@ -385,7 +384,7 @@
             <div class="speed-badge">500<span class="speed-unit">Mbps</span></div>
             <div class="price-container">
                 <div class="old-price" id="old-500">749</div>
-                <div class="current-price"><span id="price-500">749</span> <span class="currency">درهم</span></div>
+                <div class="current-price"><span id="price-500"></span> <span class="currency">درهم</span></div>
             </div>
             <ul class="features">
                 <li><i class="fas fa-wifi"></i> <b>جهاز راوتر عالي السرعة مجاني</b></li>
@@ -401,7 +400,7 @@
             <div class="speed-badge">1000<span class="speed-unit">Mbps</span></div>
             <div class="price-container">
                 <div class="old-price" id="old-1000">949</div>
-                <div class="current-price"><span id="price-1000">949</span> <span class="currency">درهم</span></div>
+                <div class="current-price"><span id="price-1000"></span> <span class="currency">درهم</span></div>
             </div>
             <ul class="features">
                 <li><i class="fas fa-wifi"></i> <b>جهاز راوتر Pro مجاني</b></li>
@@ -441,12 +440,17 @@
         let currentCategory = 'standard';
         let categoryName = 'العرض العادي';
 
-        function setCategory(category) {
+        function setCategory(category, initialLoad = false) {
             currentCategory = category;
             
             // تحديث الأزرار
             document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
-            event.currentTarget.classList.add('active');
+            if(initialLoad){
+                const activeBtn = document.getElementById(`btn-${category}`);
+                if(activeBtn) activeBtn.classList.add('active');
+            } else {
+                event.currentTarget.classList.add('active');
+            }
 
             updateUI();
         }
@@ -500,7 +504,3 @@
     </script>
 </body>
 </html>
-
-
-
-
