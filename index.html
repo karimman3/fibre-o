@@ -3,32 +3,175 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>الصفحة الرئيسية</title>
-    <style>
-        body { font-family: 'Arial', sans-serif; text-align: center; margin-top: 50px; background-color: #f4f4f4; }
-        h1 { color: #333; }
-        .links a {
-            display: inline-block;
-            margin: 10px;
-            padding: 10px 20px;
-            font-size: 18px;
-            text-decoration: none;
-            color: white;
-            background-color: #007bff;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-        .links a:hover {
-            background-color: #0056b3;
-        }
-    </style>
+    <title>الصفحة الرئيسية | أسعار العموم</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <script type='text/javascript' src='//pl28120926.effectivegatecpm.com/91/f2/c5/91f2c593df8c17c804c277b1ee125f44.js'></script>
 </head>
 <body>
-    <h1>🏠 مرحباً بك في الصفحة الرئيسية</h1>
-    <p>هنا تجد الروابط للانتقال إلى صفحات العروض:</p>
-    <div class="links">
-        <a href="50.html">عرض خصم 50%</a>
-        <a href="em.html">عرض خصم 25%</a>
+    <script type='text/javascript' src='//pl28120896.effectivegatecpm.com/f4/26/4e/f4264e81c642faec9aa7e6ff38c3d50e.js'></script>
+    <header>
+        <div class="logo"><i class="fas fa-wifi"></i> Fibre<span>Orange</span></div>
+        <div class="contact-header">
+            <span class="name">المستشار: كريم (Karim)</span>
+            <a href="tel:0660201206">0660.201.206 <i class="fas fa-phone-flip"></i></a>
+        </div>
+    </header>
+
+    <div class="hero">
+        <div data-aos="fade-down">
+            <h1>أقوى عروض الألياف البصرية</h1>
+            <p>اختر الفئة التي تنتمي إليها للحصول على سعرك المخفض</p>
+        </div>
     </div>
+
+    <section class="consultant-section" data-aos="zoom-in">
+        <div class="consultant-card">
+            <img src="https://i.top4top.io/p_3621xfwcd1.png" alt="المستشار التجاري كريم" class="consultant-img">
+            <div class="consultant-info">
+                <h2>تحدث مع مستشارنا التجاري</h2>
+                <p>الاسم: **كريم (Karim)**</p>
+                <p>للاستفسار والحصول على العروض الخاصة والتخفيضات</p>
+                <a href="tel:0660201206" class="btn-call"><i class="fas fa-phone-flip"></i> اتصل الآن: 0660.201.206</a>
+            </div>
+        </div>
+    </section>
+    
+    <div class="pricing-controls" data-aos="fade-up">
+        <a href="index.html" class="filter-btn active">
+            <i class="fas fa-users"></i> العموم
+        </a>
+        <a href="em.html" class="filter-btn">
+            <span class="discount-badge">-25%</span>
+            <i class="fas fa-briefcase"></i> موظفي الدولة
+        </a>
+        <a href="50.html" class="filter-btn">
+            <span class="discount-badge">-50%</span>
+            <i class="fas fa-medal"></i> قدماء المحاربين
+        </a>
+    </div>
+
+    <div class="category-info" id="catInfo">الأسعار العامة لجميع الزبائن</div>
+
+    <div class="pricing-grid">
+        <div class="card" id="card-20" data-aos="fade-up">
+            <div class="promo-tag">تخفيض</div>
+            <div class="speed-badge">20<span class="speed-unit">Mbps</span></div>
+            <div class="price-container">
+                <div class="old-price" id="old-20" style="display: none;"></div>
+                <div class="current-price"><span id="price-20">249</span> <span class="currency">درهم</span></div>
+            </div>
+            <ul class="features">
+                <li><i class="fas fa-wifi"></i> <b>جهاز راوتر مجاني</b></li>
+                <li><i class="fas fa-clock"></i> 2 ساعات مكالمات</li>
+                <li><i class="fas fa-phone-alt"></i> لا محدود نحو الثابت</li>
+                <li><i class="fas fa-tools"></i> مصاريف التركيب 99 درهم</li>
+            </ul>
+            <a href="#" class="btn-order" onclick="orderNow(20)">اطلب الآن</a>
+        </div>
+
+        <div class="card" id="card-50" data-aos="fade-up" data-aos-delay="100">
+            <div class="promo-tag">تخفيض</div>
+            <div class="speed-badge">50<span class="speed-unit">Mbps</span></div>
+            <div class="price-container">
+                <div class="old-price" id="old-50" style="display: none;"></div>
+                <div class="current-price"><span id="price-50">299</span> <span class="currency">درهم</span></div>
+            </div>
+            <ul class="features">
+                <li><i class="fas fa-wifi"></i> <b>جهاز راوتر مجاني</b></li>
+                <li><i class="fas fa-clock"></i> 3 ساعات مكالمات</li>
+                <li><i class="fas fa-phone-alt"></i> لا محدود نحو الثابت</li>
+                <li><i class="fas fa-check-circle"></i> <b>التركيب مجاني 100%</b></li>
+            </ul>
+            <a href="#" class="btn-order" onclick="orderNow(50)">اطلب الآن</a>
+        </div>
+
+        <div class="card" id="card-100" data-aos="fade-up" data-aos-delay="200" style="border-color: #333;">
+            <div class="promo-tag">تخفيض</div>
+            <div class="speed-badge">100<span class="speed-unit">Mbps</span></div>
+            <div class="price-container">
+                <div class="old-price" id="old-100" style="display: none;"></div>
+                <div class="current-price"><span id="price-100">349</span> <span class="currency">درهم</span></div>
+            </div>
+            <ul class="features">
+                <li><i class="fas fa-wifi"></i> <b>جهاز راوتر مجاني</b></li>
+                <li><i class="fas fa-clock"></i> 4 ساعات مكالمات</li>
+                <li><i class="fas fa-phone-alt"></i> لا محدود نحو الثابت</li>
+                <li><i class="fas fa-check-circle"></i> <b>التركيب مجاني 100%</b></li>
+            </ul>
+            <a href="#" class="btn-order" onclick="orderNow(100)">اطلب الآن</a>
+        </div>
+
+        <div class="card" id="card-200" data-aos="fade-up" data-aos-delay="300">
+            <div class="promo-tag">تخفيض</div>
+            <div class="speed-badge">200<span class="speed-unit">Mbps</span></div>
+            <div class="price-container">
+                <div class="old-price" id="old-200" style="display: none;"></div>
+                <div class="current-price"><span id="price-200">449</span> <span class="currency">درهم</span></div>
+            </div>
+            <ul class="features">
+                <li><i class="fas fa-wifi"></i> <b>جهاز راوتر مجاني</b></li>
+                <li><i class="fas fa-clock"></i> 6 ساعات مكالمات</li>
+                <li><i class="fas fa-phone-alt"></i> لا محدود نحو الثابت</li>
+                <li><i class="fas fa-check-circle"></i> <b>التركيب مجاني 100%</b></li>
+            </ul>
+            <a href="#" class="btn-order" onclick="orderNow(200)">اطلب الآن</a>
+        </div>
+
+        <div class="card premium" id="card-500" data-aos="fade-up" data-aos-delay="400">
+            <div class="promo-tag">تخفيض</div>
+            <div class="speed-badge">500<span class="speed-unit">Mbps</span></div>
+            <div class="price-container">
+                <div class="old-price" id="old-500" style="display: none;"></div>
+                <div class="current-price"><span id="price-500">749</span> <span class="currency">درهم</span></div>
+            </div>
+            <ul class="features">
+                <li><i class="fas fa-wifi"></i> <b>جهاز راوتر عالي السرعة مجاني</b></li>
+                <li><i class="fas fa-clock"></i> <b>10 ساعات مكالمات</b></li>
+                <li><i class="fas fa-phone-alt"></i> لا محدود نحو الثابت</li>
+                <li><i class="fas fa-check-circle"></i> <b>التركيب مجاني 100%</b></li>
+            </ul>
+            <a href="#" class="btn-order" onclick="orderNow(500)">اطلب الآن</a>
+        </div>
+
+        <div class="card premium" id="card-1000" data-aos="fade-up" data-aos-delay="500">
+            <div class="promo-tag">تخفيض</div>
+            <div class="speed-badge">1000<span class="speed-unit">Mbps</span></div>
+            <div class="price-container">
+                <div class="old-price" id="old-1000" style="display: none;"></div>
+                <div class="current-price"><span id="price-1000">949</span> <span class="currency">درهم</span></div>
+            </div>
+            <ul class="features">
+                <li><i class="fas fa-wifi"></i> <b>جهاز راوتر Pro مجاني</b></li>
+                <li><i class="fas fa-clock"></i> <b>20 ساعة مكالمات</b></li>
+                <li><i class="fas fa-phone-alt"></i> لا محدود نحو الثابت</li>
+                <li><i class="fas fa-check-circle"></i> <b>التركيب مجاني 100%</b></li>
+            </ul>
+            <a href="#" class="btn-order" onclick="orderNow(1000)">اطلب الآن</a>
+        </div>
+
+    </div>
+
+    <a href="https://wa.me/212660201206" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <footer style="background: #222; color: #fff; text-align: center; padding: 20px;">
+        <p>للطلب والاستفسار تواصل مع كريم: <strong style="color:var(--primary-color)">0660201206</strong></p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // إعداد الفئة الافتراضية
+        window.onload = function() {
+            AOS.init();
+            updateUI('standard');
+        };
+    </script>
 </body>
 </html>
